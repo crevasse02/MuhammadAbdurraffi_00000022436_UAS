@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Maps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar [ngClass]="checkIn_map ? 'hide' : 'show'">
+    <ion-button style="margin-left: 1%;" (click)="oncheckIn_map()" expand="block" > Check In !</ion-button>
+    <ion-button color="primary" style="margin-right: 1%;"slot="end" (click)="ionViewDidEnter()"><ion-icon name="locate-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  <ion-toolbar [ngClass]="checkIn_map ? 'show' : 'hide'">
+    <ion-item>
+      <ion-label position="floating">Current location?</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-button slot="end" type="submit" (click)="firebaseCheckIn()">Check In</ion-button>
+    <ion-button color="danger" style="margin-right: 1%;" (click)="offcheckIn_map()" slot="end" ><ion-icon name="close-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-footer>
+

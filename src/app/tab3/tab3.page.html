@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list style="display:flex; justify-content: center;">
+          <ion-item>
+            <ion-avatar class="profile">
+              <img src={{profilePic}} (click)="getPicture('camera')" alt="">
+            </ion-avatar>
+          </ion-item>
+        </ion-list>
+        <ion-list style="display:flex; justify-content: center;" >
+          <ion-label class="name">{{userName}}</ion-label>
+        </ion-list>
+        <ion-list style="display:flex; justify-content: center;">
+          <ion-label>{{email}}</ion-label>
+        </ion-list>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <input type="file" *ngIf="isDesktop" #filePicker (change)="OnFileChoose($event)"/>
+  <ion-button (click)="logout()" style="padding-left: 50px; padding-right: 50px;" expand="block" color="danger">Logout</ion-button>
+  <p style="text-align: center;">Perjalanan di kelas Mobile Cross Platform sangat mengesankan, semoga kedepannya ilmu yang didapat bisa diaplikasikan dalam dunia kerja beserta dengan ilmu-ilmu sosial lainnya :)</p>
+
+  
+</ion-content>

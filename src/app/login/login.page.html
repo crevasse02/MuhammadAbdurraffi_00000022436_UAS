@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item no-padding lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+    <ion-item no-padding lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-button expand="block" color="primary" type="submit" (click)="login()">
+          Login
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-label style="display:flex; justify-content: center; cursor:default;">
+      Doesn't have an account ? &nbsp; <a style="cursor: pointer;"(click)="goRegisterPage()">Sign up now !</a>
+    </ion-label>
+</ion-content>

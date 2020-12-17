@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding: 15px;">
+    <ion-item lines="full">
+      <ion-label position="floating">First name</ion-label>
+      <ion-input [(ngModel)]="firstName" type="text" autocomplete="off" autocorrect="off"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input [(ngModel)]="lastName" type="text" autocomplete="off" autocorrect="off"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text" autocomplete="off" autocorrect="off"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" autocomplete="off" autocorrect="off"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-button (click)="register()" type="submit" color="primary" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-label style="display:flex; justify-content: center; cursor:default;">
+      Already have an account ? &nbsp; <a style="cursor: pointer;"(click)="goLoginPage()"> Login now!</a>
+    </ion-label>
+</ion-content>
